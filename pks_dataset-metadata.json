@@ -1,0 +1,58 @@
+{
+  "title": "Pakistan Education System Dataset (2022-2025)",
+  "id": "hamnamunir/pakistan-education-system",
+  "licenses": [{"name": "CC0-1.0"}],
+  "keywords": [
+    "pakistan", "education", "schools", "dropout rate", "pass rate",
+    "gender disparity", "rural education", "infrastructure", "teachers",
+    "enrollment", "EDA", "regression", "classification", "policy research",
+    "south asia", "synthetic data"
+  ],
+  "collaborators": [],
+  "data": [
+    {
+      "description": "Main dataset containing 10,000 synthetic Pakistan school-level records from 2022 to 2025. Covers 7 provinces, 50+ districts, 9 school types, and 34 features including enrollment, pass/dropout rates, teacher quality, infrastructure facilities, budget, and geographic data.",
+      "name": "pakistan_education_system.csv",
+      "columns": [
+        {"name": "school_id", "description": "Unique school identifier in format PKS000001 to PKS010000."},
+        {"name": "year", "description": "Year of the school record or survey. Values: 2022, 2023, 2024, 2025."},
+        {"name": "province", "description": "Province or territory where the school is located. Values: Punjab, Sindh, KPK, Balochistan, Islamabad (ICT), Gilgit-Baltistan, AJK."},
+        {"name": "district", "description": "District within the province. Covers 50+ districts across Pakistan including Lahore, Karachi, Peshawar, Quetta, Islamabad, and more."},
+        {"name": "area_type", "description": "Geographic classification of the school location. Values: Urban, Semi-Urban, Rural, Remote."},
+        {"name": "school_type", "description": "Type of school. Values: Government Primary, Government Secondary, Government Higher Secondary, Private Primary, Private Secondary, Private Higher Secondary, Madrasah, Special Education, Technical/Vocational."},
+        {"name": "school_ownership", "description": "Entity responsible for running the school. Values: Government, Private, NGO/Trust, Community Based."},
+        {"name": "medium_of_instruction", "description": "Primary language used for teaching. Values: Urdu, English, Sindhi, Pashto, Bilingual (Urdu/English)."},
+        {"name": "shift", "description": "School operating shift. Values: Morning, Evening, Full Day."},
+        {"name": "grade_level", "description": "Grade level being reported in this record. Values: Grade 1 through Grade 12."},
+        {"name": "gender_served", "description": "Gender of students enrolled at the school. Values: Male, Female."},
+        {"name": "total_enrollment", "description": "Total number of students enrolled at the school. Range: 20 to 3000."},
+        {"name": "female_enrollment_ratio", "description": "Proportion of enrolled students who are female. Range: 0.05 to 0.95. Lower in remote areas."},
+        {"name": "total_teachers", "description": "Total number of teachers working at the school. Range: 1 to 120."},
+        {"name": "qualified_teachers_pct", "description": "Percentage of teachers who hold a formal teaching qualification or degree. Range: 40 to 100."},
+        {"name": "student_teacher_ratio", "description": "Average number of students per teacher. Higher ratios indicate overcrowding."},
+        {"name": "teacher_training_received", "description": "Whether teachers received in-service professional training. Values: Yes, No, Partial."},
+        {"name": "pass_rate_pct", "description": "Percentage of students who passed their annual exams. Range: 20 to 99. Influenced by area type, ownership, and medium."},
+        {"name": "dropout_rate_pct", "description": "Percentage of enrolled students who dropped out during the year. Range: 0.5 to 55. Higher in remote and rural areas especially for females."},
+        {"name": "matric_avg_score", "description": "Average matric examination score out of 100. Only populated for Grade 9 and Grade 10 records. Null for all other grades."},
+        {"name": "scholarship_available", "description": "Whether the school offers any scholarship program to students. Values: Yes, No."},
+        {"name": "monthly_fee_pkr", "description": "Monthly tuition fee charged in Pakistani Rupees. Zero for government schools. Range: 0 to several thousand PKR for private schools."},
+        {"name": "annual_budget_pkr", "description": "Annual operating budget of the school in Pakistani Rupees. Follows log-normal distribution. Range: 50,000 to 50,000,000 PKR."},
+        {"name": "infrastructure_score", "description": "Composite infrastructure quality score computed from 8 facility indicators. Range: 0.0 (no facilities) to 8.0 (all facilities present)."},
+        {"name": "has_electricity", "description": "Electricity availability at the school. Values: Yes, No, Partial."},
+        {"name": "has_clean_water", "description": "Whether clean drinking water is available at the school. Values: Yes, No."},
+        {"name": "has_toilets", "description": "Toilet facility status at the school. Values: Yes - Separate (male/female), Yes - Combined, No."},
+        {"name": "has_library", "description": "Whether the school has a functional library. Values: Yes, No."},
+        {"name": "has_computer_lab", "description": "Whether the school has a computer laboratory. Values: Yes, No."},
+        {"name": "has_playground", "description": "Whether the school has a playground or sports area. Values: Yes, No."},
+        {"name": "has_boundary_wall", "description": "Boundary wall status of the school premises. Values: Yes, No, Partial."},
+        {"name": "has_internet", "description": "Whether the school has internet connectivity. Values: Yes, No."},
+        {"name": "building_condition", "description": "Physical condition of the school building. Values: Excellent, Good, Fair, Poor, Very Poor."},
+        {"name": "distance_from_city_km", "description": "Distance from the nearest major city in kilometers. Range: 0.5 to 200 km. Higher values indicate more remote schools."}
+      ]
+    },
+    {
+      "description": "Full dataset documentation including schema, methodology, research questions, use cases, citation, and author information.",
+      "name": "README.md"
+    }
+  ]
+}
